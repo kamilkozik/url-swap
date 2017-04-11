@@ -3,4 +3,10 @@ from __future__ import unicode_literals
 
 from django.contrib import admin
 
-# Register your models here.
+from url_swap.apps.main.models import UrlSwap
+
+
+class UrlSwapAdmin(admin.ModelAdmin):
+    list_display = ['proxy_url', 'origin_url']
+
+admin.site.register(UrlSwap, UrlSwapAdmin)

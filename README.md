@@ -1,3 +1,6 @@
+### Info
+Swaps url for short one (<domain_name>/<proxy_url>)
+
 ### Installation guide
 
 ```
@@ -6,4 +9,3 @@ pip install -r requirements.txt
 ./manage.py runserver --settings=url_swap.settings.base
 ```
 
-Provide mysql db credentials at `url_swap/settings/base.py` (user, pass, etc.)

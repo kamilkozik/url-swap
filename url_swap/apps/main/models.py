@@ -14,7 +14,7 @@ class UrlSwap(models.Model):
     proxy_url = models.URLField(u'Proxy url', max_length=100, blank=False, null=False, db_index=True)
 
     def __str__(self):
-        return self.origin
+        return self.origin_url
 
     @staticmethod
     def get_proxy_url(size):
