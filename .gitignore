@@ -1,0 +1,9 @@
+# Directories
+
+.idea/*
+env/*
+
+# Files
+
+db.sqlite3
+*.pyc
