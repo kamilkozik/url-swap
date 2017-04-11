@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="post" action={% url 'main:url:add' %}>
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>{{ form.origin_url.label }}</td>
+                <td>{{ form.origin_url }}</td>
+            </tr>
+        </table>
+        <input type="submit" value="Get shortened url" />
+
+    </form>
+{% endblock %}

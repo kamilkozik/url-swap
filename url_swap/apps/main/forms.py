@@ -2,4 +2,4 @@ from django import forms
 
 
 class UrlSwapForm(forms.Form):
-    original_url = forms.URLInput()
+    origin_url = forms.URLField(label='Adres url', required=True)
