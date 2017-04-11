@@ -47,3 +47,11 @@ def show_url(request, proxy_url):
     proxy_url = url_swap.proxy_url
     return render(request, template_name='main/show_url.html',
                   context={'proxy_url': protocol + u'://' + site.domain + "/" + proxy_url})
+
+
+def redirect_to_origin(request, proxy_url):
+    try:
+        url_swap = UrlSwap.objects.get(proxy_url=proxy_url)
+    except UrlSwap.DoesNotExist:
+        return redirect(reverse('main:show_form'))
+    return redirect(url_swap.origin_url)
