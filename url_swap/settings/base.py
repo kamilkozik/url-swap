@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # debug
-    'debug_toolbar',
+    # 'debug_toolbar',
 
     # url_swap
     'url_swap.apps.main'
@@ -57,7 +57,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    # 'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'url_swap.urls'
@@ -87,7 +87,7 @@ WSGI_APPLICATION = 'url_swap.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'urlswap',
+        'NAME': 'kkamil$urlswap',
         'USER': 'kkamil',
         'PASSWORD': 'zaq12wsx',
         'HOST': 'kkamil.mysql.pythonanywhere-services.com',
@@ -132,6 +132,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 PROXY_URL_SIZE = 10
